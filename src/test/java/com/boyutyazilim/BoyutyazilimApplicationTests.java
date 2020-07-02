@@ -1,4 +1,4 @@
-package com.boyutyazilim.boyutyazilim;
+package com.boyutyazilim;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

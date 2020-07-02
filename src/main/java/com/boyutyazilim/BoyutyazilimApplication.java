@@ -1,9 +1,11 @@
-package com.boyutyazilim.boyutyazilim;
+package com.boyutyazilim;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
+@EnableCaching
 public class BoyutyazilimApplication {
 
 	public static void main(String[] args) {

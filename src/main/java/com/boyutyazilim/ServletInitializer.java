@@ -1,4 +1,4 @@
-package com.boyutyazilim.boyutyazilim;
+package com.boyutyazilim;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
