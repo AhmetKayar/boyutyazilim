@@ -45,7 +45,7 @@ services:
     networks: # Networks to join (Services on the same network can communicate with each other using their name)
       - proxy
     ports:
-      - 5000:5000
+      - 5000:8080
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.api-server.rule=Host(`www.boyutyazilim.com`)"
