@@ -24,7 +24,7 @@ pipeline {
               // Build the image
               withCredentials([usernamePassword(credentialsId: 'Github', usernameVariable: 'GITHUB_USERNAME', passwordVariable: 'GITHUB_PASSWORD')]) {
                   def repoURL = """
-                    https://portainer.boyutyazilim.com/api/endpoints/1/docker/build?t=sigortakontrol:v1&remote=https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/$GITHUB_USERNAME/sigortakontrol.git&dockerfile=Dockerfile&nocache=true
+                    https://portainer.boyutyazilim.com/api/endpoints/1/docker/build?t=boyutyazilim:v1&remote=https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/$GITHUB_USERNAME/boyutyazilim.git&dockerfile=Dockerfile&nocache=true
                   """
                   def imageResponse = httpRequest httpMode: 'POST', ignoreSslErrors: true, url: repoURL, validResponseCodes: '200', customHeaders:[[name:"Authorization", value: env.JWTTOKEN ], [name: "cache-control", value: "no-cache"]]
               }
