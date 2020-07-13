@@ -5,4 +5,4 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN mvn package
 
-CMD [ "sh", "-c", "mvn -Dserver.port=8080 spring-boot:run" ]
+CMD [ "sh", "-c", "mvn -Dserver.port=80 spring-boot:run" ]
