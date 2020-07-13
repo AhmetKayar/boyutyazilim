@@ -16,6 +16,9 @@ services:
     ports:
       - 5432:5432
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4
@@ -51,12 +54,12 @@ services:
       - "traefik.enable=true"
       - "traefik.http.middlewares.bytyzlm-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.bytyzlm-secure.entrypoints=https"
-      - "traefik.http.routers.bytyzlm-secure.rule=Host(`boyutyazilim.com`)"
+      - "traefik.http.routers.bytyzlm-secure.rule=Host(`boyutyazilim.com`,`www.boyutyazilim.com`)"
       - "traefik.http.routers.bytyzlm-secure.tls=true"
       - "traefik.http.routers.bytyzlm-secure.tls.certresolver=http"
       - "traefik.http.routers.bytyzlm.entrypoints=http"
       - "traefik.http.routers.bytyzlm.middlewares=bytyzlm-https-redirect"
-      - "traefik.http.routers.bytyzlm.rule=Host(`boyutyazilim.com`)"
+      - "traefik.http.routers.bytyzlm.rule=Host(`boyutyazilim.com`,`www.boyutyazilim.com`)"
 
 
 # Networks to be created to facilitate communication between containers
