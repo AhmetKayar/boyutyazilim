@@ -4,7 +4,7 @@ spring:
   application:
     name: "BoyutYazılım"
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/boyutyazilim
+    url: jdbc:postgresql://34.107.46.247:5432/boyutyazilim
     username: postgres
     password: changeme
   jpa:
