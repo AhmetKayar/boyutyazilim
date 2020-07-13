@@ -3,3 +3,13 @@ server:
 spring:
   application:
     name: "BoyutYazılım"
+  datasource:
+    url: jdbc:postgresql://postgres-db:5432/boyutyazilim
+    username: postgres
+    password: changeme
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
